@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: gci -recur -hid C:\Users\runneradmin\
+      - run: gci -recur -hid C:\Users\Default
+      - run: rustup update
